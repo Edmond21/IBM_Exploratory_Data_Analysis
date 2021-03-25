@@ -68,3 +68,37 @@ The company I chose was due to the availability of the dataset.  The IBM communi
 33.	Years in Current Role
 34.	Years Since Last Promotion
 35.	Years with Current Manager
+
+## Data Organization and Cleaning
+
+The first thing I want to do is eliminate all the rows with ‘No’ in Attrition.  Those who are still at IBM are not the ones I want to analyze. 
+
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv('C:/Users/jacob/OneDrive/Desktop/IBM HR Analytics/archive/HR_Employee_Attrition.csv')
+
+df_filtered1 = df[ df['Attrition'] == 'Yes' ]
+```
+
+Then I want to eliminate columns such as Attrition, Daily Rate, Employee Count, Employee Number, Monthly Income, Monthly Rate, and Over 18.  These columns are either redundant or not necessary for the analysis I want to conduct.  I am now left with 237 rows and 28 columns.
+
+```
+df_filtered = df_filtered1.drop(["Attrition", "DailyRate", "EmployeeCount", "EmployeeNumber", "MonthlyIncome", "MonthlyRate", "Over18"], axis = 1)
+```
+
+I have done the same for those who are still working at IBM
+
+```
+df_no1 = df[df['Attrition'] == 'No']
+df_no = df_no1.drop(["Attrition", "DailyRate", "EmployeeCount", "EmployeeNumber", "MonthlyIncome", "MonthlyRate", "Over18"], axis = 1)
+```
+
+By looking at the column names, I need to change the names of a few columns to make it easier on myself when addressing the data.
+
+```
+for col in df_filtered.columns:
+    print(col)
+```
