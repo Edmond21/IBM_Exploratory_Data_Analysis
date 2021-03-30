@@ -557,3 +557,88 @@ plt.legend(labels=['Former','Current'],fontsize = 12)
 Once we get past the five year mark, employees are more likely to stay with their current manger than leave them.  However, a lot of employees have left the job at that point as well.  What happened between the 0-2 year mark makes sense when looking at past data.  Years with current manager seems to not play a role in employee attrition since the graphs for both current and former employees are similar.
 
 ## Analysis of Former Sales and R&D Employees
+
+### Environmental Satisfaction
+
+The environmental satisfaction for former employees was much lower than current employees but are there any disparities between former sales and R&D employees.
+
+```
+EnviroSat_Sales = sns.distplot(df_Sales['EnviroSat'])
+EnviroSat_Sales
+EnviroSat_RD = sns.distplot(df_RD['EnviroSat']).set_title("Environmental Satisfaction of Former Sales and R&D Employees")
+EnviroSat_RD
+plt.legend(labels=['Sales','RD'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113062618-e33d3e00-9168-11eb-8d78-ffb6040f321a.png)
+
+The only stark difference between the two departments is the level 2 rating.  More sales employees rated their environmental satisfaction at a level 2 while R&D had less uniformity.  Those who did not rate environmental satisfaction at a level 2, placed that rating at 3 and 4.  This suggest a little more people in the R&D department enjoyed their workplace environment in comparison to Sales employees.
+
+### Job Levels
+
+A lot of employees at the level 1 job level left IBM in comparison to those who have stayed.  More employees have stayed at IBM when they are at the level 2 job level.  Are there any differences amongst former sales and R&D employees.
+
+```
+JobLvl_Sales = sns.distplot(df_Sales['JobLevel'])
+JobLvl_Sales
+JobLvl_RD = sns.distplot(df_RD['JobLevel']).set_title("Sales and R&D Employees Job Levels")
+JobLvl_RD
+plt.legend(labels=['Sales','R&D'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113063260-dec55500-9169-11eb-935f-5c4fe56a82d8.png)
+
+A lot more R&D employees left IBM at the first job level while more sales employees left IBM at the second job level.  Something at these levels could be giving employees from both R&D and sales a reason to leave IBM.
+
+### Over Time
+
+Since there was a disparity between current and former employees regarding over time where more former employees worked more over time; is there a disparity between former sales and R&D employees?
+
+```
+OT_Sales = df_Sales['OverTime'].value_counts()[:20].plot(kind='barh').set_title("Former Sales Employee Over Time")
+OT_Sales
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113063854-cf92d700-916a-11eb-9192-35703768abd7.png)
+
+
+```
+OT_RD = df_RD['OverTime'].value_counts()[:20].plot(kind='barh').set_title("Former R&D Employee Over Time")
+OT_RD
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113063899-e1747a00-916a-11eb-8d71-637a8a8cd632.png)
+
+There isn't a disparity in the use of over time between former sales and R&D employees.
+
+### Stock Option Level
+
+What differences are their between former sales and R&D employees regarding stock options?
+
+```
+StockOp_Sales = sns.distplot(df_filtered['StockOpLvl'])
+StockOp_Sales
+StockOp_RD = sns.distplot(df_no['StockOpLvl']).set_title("Sales and R&D Employee Stock Option Level")
+StockOp_RD
+plt.legend(labels=['Sales','R&D'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113064129-462fd480-916b-11eb-8f27-90c0d9f2edc3.png)
+
+The R&D department was given more stock options at level 1 and 2 in comparison to sales.
+
+### Work Life Balance
+
+Are there differences in work life balance between former sales and R&D departments?
+
+```
+WrkLife_Sales = sns.distplot(df_Sales['WorkLifeBalance'])
+WrkLife_Sales
+WrkLife_RD = sns.distplot(df_RD['WorkLifeBalance']).set_title("Sales and R&D Employee Work Life Balance Rating")
+WrkLife_RD
+plt.legend(labels=['Sales','R&D'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113064344-aa529880-916b-11eb-9bb4-cd5923d1aa0a.png)
+
+There aren't any disparities between sales and R&D departments regarding work life balance.  It also matches the former employees graph where a lot of employees ranked their work life balance at a 3 out of 4.
