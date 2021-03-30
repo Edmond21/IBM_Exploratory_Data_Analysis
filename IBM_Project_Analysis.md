@@ -103,7 +103,7 @@ for col in df_filtered.columns:
     print(col)
 ```
 
-![](C:/Users/jacob/OneDrive/Desktop/IBM_HR_Analytics/Pictures/Unchanged_Columns.png)
+![image](https://user-images.githubusercontent.com/78123049/113039354-6a2fed80-914c-11eb-90cc-5053db3b435a.png)
 
 The changes I made are:
 * BusinessTravel -> Travel
@@ -133,7 +133,8 @@ for col in df_filtered.columns:
     print(col)
 ```
 
-![](C:/Users/jacob/OneDrive/Desktop/IBM_HR_Analytics/Pictures/Changed_Columns.png)
+![image](https://user-images.githubusercontent.com/78123049/113039542-a1060380-914c-11eb-91d3-a9da3bb73dc3.png)
+
 
 ## Frequency Distribution of Age
 
@@ -144,4 +145,6 @@ Age_Dist = sns.distplot(df_filtered['Age']).set_title("Frequency Distribution of
 Age_Dist
 ```
 
-![](C:/Users/jacob/OneDrive/Desktop/IBM_HR_Analytics/Pictures/Frequency_of_Age.png)
+![image](https://user-images.githubusercontent.com/78123049/113039621-ba0eb480-914c-11eb-8b2b-2e9dbac817a5.png)
+
+
