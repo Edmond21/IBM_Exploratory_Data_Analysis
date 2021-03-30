@@ -446,3 +446,114 @@ The graph shows that many employees are willing to stay at IBM if they are given
 
 ### Total Working Years
 
+Which kind of employees are leaving at IBM, are they the first time career workers or have they worked for years?
+
+```
+YrsWorked_Yes = sns.distplot(df_filtered['#YrsWorked'])
+YrsWorked_Yes
+YrsWorked_No = sns.distplot(df_no['#YrsWorked']).set_title("All Employee Total Working Years")
+YrsWorked_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113057185-96099e00-9161-11eb-8d88-4b06bc83ec3b.png)
+
+The graph shows that many who leave IBM are first time workers but a lot of workers who have stayed at IBM have worked for less than 10 years in total.
+
+### Employee Hours Trained
+
+The number of hours trained for employees could show prepare employees better for the job.  The ones who are given more hours might be more likely to stay.
+
+```
+TrainTime_Yes = sns.distplot(df_filtered['HrsTrainedLstYr'])
+TrainTime_Yes
+TrainTime_No = sns.distplot(df_no['HrsTrainedLstYr']).set_title("All Employee Hours Trained Last Year")
+TrainTime_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113057611-1d571180-9162-11eb-889b-7454b8dd1ad0.png)
+
+Surprisingly, employees hours trained is uniform between both current and former employees.  There appears to be no underlying reason as to why hours trained might play a role in employee attrition.
+
+### Work Life Balance
+
+Work life balance is important in the workplace and those who feel that they aren't given appropriate balance, such as taking work home, might leave their current job.
+
+```
+WrkLife_Yes = sns.distplot(df_filtered['WorkLifeBalance'])
+WrkLife_Yes
+WrkLife_No = sns.distplot(df_no['WorkLifeBalance']).set_title("All Employee Work Life Balance Rating")
+WrkLife_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113057928-83439900-9162-11eb-955c-ffae873d6701.png)
+
+Many more current employees would rank work life balance at a 3 out of 4 than former employees suggesting that there is some validity to my earlier hypothesis.  
+
+### Years Worked at Current Company
+
+The longer an employee stays with a company, the less likely that employee will leave that company.  Does this prove to be true at IBM?
+
+```
+YrsCo_Yes = sns.distplot(df_filtered['YrsCo'])
+YrsCo_Yes
+YrsCo_No = sns.distplot(df_no['YrsCo']).set_title("All Employee Years Worked at Company")
+YrsCo_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113058397-eb927a80-9162-11eb-9316-3c447fbebee5.png)
+
+Those who have just started working are more likely to leave but once they hit the 5 year mark, they will most likely stay at IBM.  Employee retention in the first two years is very low in comparison to those who have stayed.
+
+### Years in Current Role
+
+Does the amount of years worked in their current role play a role in employee attrition?
+
+```
+YrsCurrRole_Yes = sns.distplot(df_filtered['YrsCurrRole'])
+YrsCurrRole_Yes
+YrsCurrRole_No = sns.distplot(df_no['YrsCurrRole']).set_title("All Employee Years in Current Role")
+YrsCurrRole_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113059101-e4b83780-9163-11eb-93ae-334a18fc7b60.png)
+
+The only interesting data is the peak at the 7 year mark.  The 0-2 year mark was also shown in the years worked at company graph.  This shows that those who don't move into a different role by this period might leave but IBM has a lot more employees staying in their current role than those leaving.  However, years in current role might not play a part in employee attrition since both current and former employee graphs are almost idetntical.
+
+### Years Since Last Promotion
+
+Those who do not get promotions as regularly as others might find work at another company.
+
+```
+YrsPromo_Yes = sns.distplot(df_filtered['YrsSinceLstPromo'])
+YrsPromo_Yes
+YrsPromo_No = sns.distplot(df_no['YrsSinceLstPromo']).set_title("All Employee Years Since Last Promotion")
+YrsPromo_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113059578-77f16d00-9164-11eb-81e4-345d3da6cd17.png)
+
+So both current and former employees graphs are almost identical suggesting that years since last promotion plays no role in employee attrition.
+
+### Years With Current Manager
+
+Do the years spent with their current manager play a role in attrition?
+
+```
+YrsCurrManag_Yes = sns.distplot(df_filtered['YrsWCurrManag'])
+YrsCurrManag_Yes
+YrsCurrManag_No = sns.distplot(df_no['YrsWCurrManag']).set_title("All Employee Years With Current Maanger")
+YrsCurrManag_No
+plt.legend(labels=['Former','Current'],fontsize = 12)
+```
+
+![image](https://user-images.githubusercontent.com/78123049/113059977-ed5d3d80-9164-11eb-8a5e-05235862002c.png)
+
+Once we get past the five year mark, employees are more likely to stay with their current manger than leave them.  However, a lot of employees have left the job at that point as well.  What happened between the 0-2 year mark makes sense when looking at past data.  Years with current manager seems to not play a role in employee attrition since the graphs for both current and former employees are similar.
+
+## Analysis of Former Sales and R&D Employees
