@@ -609,7 +609,7 @@ OT_RD
 
 ![image](https://user-images.githubusercontent.com/78123049/113063899-e1747a00-916a-11eb-8d71-637a8a8cd632.png)
 
-There isn't a disparity in the use of over time between former sales and R&D employees.
+There isn't a disparity in the use of overtime between former sales and R&D employees.
 
 ### Stock Option Level
 
@@ -645,4 +645,9 @@ There aren't any disparities between sales and R&D departments regarding work li
 
 ## Conclusion
 
-IBM is a large company and trying to cut costs are a top priority.  Those costs can be cut down by lowering the rate of attrition.  Utilizing the data I was able to pinpoint certain areas which could be the cause of attrition.  Such areas include environmental satisfaction, being an entry level employee, marital status, employee stock option level, working overtime, and working less than a few total years.  These factors are quite surprising since I would have assumed that work life balance, hourly rate, and performance rating to play a greater role in attrition.  These results showed that employees at IBM who are single, work overtime, are in an entry level position, have only worked less than 2 years in the industry, and don't receive any form of stock options are likely to leave IBM.  The sales and R&D department 
+IBM is a large company and trying to cut costs are a top priority.  Those costs can be cut down by lowering the rate of attrition.  Utilizing the data I was able to pinpoint certain areas which could be the cause of attrition.  Such areas include environmental satisfaction, being an entry level employee, marital status, employee stock option level, working overtime, and working less than a few total years.  These factors are quite surprising since I would have assumed that work life balance, hourly rate, and performance rating to play a greater role in attrition.  These results showed that employees at IBM who are single, work overtime, are in an entry level position, have only worked less than 2 years in the industry, and don't receive any form of stock options are likely to leave IBM.  The sales and R&D department are the two jobs that see the most attrition.  The R&D department are given more stock options than their sales employee counterparts.  Giving sales employee stock options might alleviate attrition.  R&D employees leave IBM at the first job level while sales employees have a greater rate of attrition in the second job level.
+
+##  Future
+
+I am currently working on the hypothesis testing for the impacted categories listed in the conclusion to test whether the data is statistically significant.
+
