@@ -358,9 +358,9 @@ plt.legend(labels=['Former','Current'],fontsize = 12)
 
 The results have surprised me since both the former and current employees are almost identical in the number of companies they have worked.  The number of companies worked plays a nonexistant role in attrition.
 
-### Over Time
+### Overtime
 
-Can over time be a factor of attrition at IBM?
+Can overtime be a factor of attrition at IBM?
 
 ```
 OT_Yes = df_filtered['OverTime'].value_counts()[:20].plot(kind='barh').set_title("Former Employee Over Time")
@@ -376,7 +376,7 @@ OT_No
 
 ![image](https://user-images.githubusercontent.com/78123049/113054367-2d6cf200-915e-11eb-8a55-6f356f17873e.png)
 
-There are more former employees who took over time in compairson to the current employees.  I would want to know if over time was forced upon those employees.
+There are more former employees who took overtime in compairson to the current employees.  I would want to know if over time was forced upon those employees.
 
 ### Percent Salary Hike
 
@@ -590,9 +590,9 @@ plt.legend(labels=['Sales','R&D'],fontsize = 12)
 
 A lot more R&D employees left IBM at the first job level while more sales employees left IBM at the second job level.  Something at these levels could be giving employees from both R&D and sales a reason to leave IBM.
 
-### Over Time
+### Overtime
 
-Since there was a disparity between current and former employees regarding over time where more former employees worked more over time; is there a disparity between former sales and R&D employees?
+Since there was a disparity between current and former employees regarding over time where more former employees worked more overtime; is there a disparity between former sales and R&D employees?
 
 ```
 OT_Sales = df_Sales['OverTime'].value_counts()[:20].plot(kind='barh').set_title("Former Sales Employee Over Time")
@@ -642,3 +642,7 @@ plt.legend(labels=['Sales','R&D'],fontsize = 12)
 ![image](https://user-images.githubusercontent.com/78123049/113064344-aa529880-916b-11eb-9bb4-cd5923d1aa0a.png)
 
 There aren't any disparities between sales and R&D departments regarding work life balance.  It also matches the former employees graph where a lot of employees ranked their work life balance at a 3 out of 4.
+
+## Conclusion
+
+IBM is a large company and trying to cut costs are a top priority.  Those costs can be cut down by lowering the rate of attrition.  Utilizing the data I was able to pinpoint certain areas which could be the cause of attrition.  Such areas include environmental satisfaction, being an entry level employee, marital status, employee stock option level, working overtime, and working less than a few total years.  These factors are quite surprising since I would have assumed that work life balance, hourly rate, and performance rating to play a greater role in attrition.  These results showed that employees at IBM who are single, work overtime, are in an entry level position, have only worked less than 2 years in the industry, and don't receive any form of stock options are likely to leave IBM.  The sales and R&D department 
